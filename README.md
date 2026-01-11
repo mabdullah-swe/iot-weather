@@ -4,8 +4,7 @@ A modern, responsive, and real-time weather monitoring system powered by the Ard
 
 Unlike traditional Arduino web servers that reload the page constantly, this project uses AJAX to fetch data instantly in the background, providing a smooth, app-like experience. The dashboard features a clean interface that works well on both desktop and mobile devices.
 
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
-*(Add a screenshot of your web dashboard here)*
+<img width="963" height="685" alt="Image" src="https://github.com/user-attachments/assets/3ea6da91-3814-4317-9aee-1b843448415d" />
 
 ## Features
 

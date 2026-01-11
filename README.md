@@ -2,7 +2,10 @@
 
 A modern, responsive, and real-time weather monitoring system powered by the Arduino UNO R4 WiFi.
 
-Unlike traditional Arduino web servers that constantly reload the page, this project utilizes AJAX to fetch data instantly in the background, providing a smooth, app-like experience. The dashboard features a clean interface that works well on both desktop and mobile devices.
+Unlike traditional Arduino web servers that reload the page constantly, this project uses AJAX to fetch data instantly in the background, providing a smooth, app-like experience. The dashboard features a clean interface that works well on both desktop and mobile devices.
+
+![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
+*(Add a screenshot of your web dashboard here)*
 
 ## Features
 
@@ -21,20 +24,42 @@ Unlike traditional Arduino web servers that constantly reload the page, this pro
 | **DHT11** | Temperature & Humidity Sensor. |
 | **BMP180** | Barometric Pressure Sensor (I2C). |
 | **MQ135** | Air Quality / Gas Sensor. |
-| **Rain Sensor** | YL-83 Module (Analog). |
+| **Rain Sensor** | YL-83 Module. |
 | **Breadboard & Wires** | For connections. |
 
 ## Pin Configuration
 
-| Sensor | Sensor Pin | Arduino Pin |
-| :--- | :--- | :--- |
-| **DHT11** | DATA | D2 |
-| **BMP180** | SDA | SDA (Near USB) |
-| **BMP180** | SCL | SCL (Near USB) |
-| **MQ135** | A0 | A0 |
-| **Rain Sensor** | A0 | A1 |
+### MQ135 Sensor
+| MQ135 Pin | Arduino UNO R4 Pin |
+| :--- | :--- |
+| VCC | 5V |
+| GND | GND |
+| AOUT | Analog Pin (A3) |
 
-**Note:** Ensure all sensors are powered correctly (5V/GND) and your breadboard power rails are not split.
+### DHT11 Sensor
+| DHT11 Pin | Arduino UNO R4 Pin |
+| :--- | :--- |
+| VCC | 5V |
+| GND | GND |
+| DATA | Digital Pin (D2) |
+
+### BMP180 Sensor
+| BMP180 Pin | Arduino UNO R4 Pin |
+| :--- | :--- |
+| VCC | 5V |
+| GND | GND |
+| SDA | SDA (A4) |
+| SCL | SCL (A5) |
+
+### Rain Sensor
+| Rain Sensor Pin | Arduino UNO R4 Pin |
+| :--- | :--- |
+| VCC | 5V |
+| GND | GND |
+| DOUT | Digital Pin (D3) |
+
+**Note on Connections:** * **BMP180:** For the Arduino UNO R4 WiFi, it is often best to use the dedicated SDA/SCL pins located near the USB connector.
+* **Rain Sensor:** This configuration uses the Digital Output (D3). Ensure your code is set to read digital values for rain detection.
 
 ## Installation & Setup
 

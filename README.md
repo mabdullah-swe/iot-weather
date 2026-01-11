@@ -28,34 +28,34 @@ Unlike traditional Arduino web servers that reload the page constantly, this pro
 
 ## Pin Configuration
 
-### MQ135 Sensor
+### MQ135 Sensor (Air Quality)
 | MQ135 Pin | Arduino UNO R4 Pin |
 | :--- | :--- |
 | VCC | 5V |
 | GND | GND |
-| AOUT | Analog Pin (A3) |
+| AOUT | Analog Pin (A0) |
 
-### DHT11 Sensor
+### Rain Sensor (YL-83)
+| Rain Sensor Pin | Arduino UNO R4 Pin |
+| :--- | :--- |
+| VCC | 5V |
+| GND | GND |
+| AOUT | Analog Pin (A1) |
+
+### DHT11 Sensor (Temperature/Humidity)
 | DHT11 Pin | Arduino UNO R4 Pin |
 | :--- | :--- |
 | VCC | 5V |
 | GND | GND |
 | DATA | Digital Pin (D2) |
 
-### BMP180 Sensor
+### BMP180 Sensor (Pressure)
 | BMP180 Pin | Arduino UNO R4 Pin |
 | :--- | :--- |
 | VCC | 5V |
 | GND | GND |
-| SDA | SDA (A4) |
-| SCL | SCL (A5) |
-
-### Rain Sensor
-| Rain Sensor Pin | Arduino UNO R4 Pin |
-| :--- | :--- |
-| VCC | 5V |
-| GND | GND |
-| DOUT | Digital Pin (D3) |
+| SDA | SDA (Near USB) |
+| SCL | SCL (Near USB) |
 
 **Note on Connections:** * **BMP180:** For the Arduino UNO R4 WiFi, it is often best to use the dedicated SDA/SCL pins located near the USB connector.
 * **Rain Sensor:** This configuration uses the Digital Output (D3). Ensure your code is set to read digital values for rain detection.

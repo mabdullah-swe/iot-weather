@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Station Dashboard</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .header h1 {
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+
+      .time {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      /* Glassmorphism Card Style */
+      .card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: background 0.5s;
+      }
+
+      /* Main Temperature Card Specifics */
+      .temp-display {
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .unit {
+        font-size: 1.5rem;
+        vertical-align: super;
+      }
+
+      /* Grid Layout */
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .info-card {
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        font-size: 2rem;
+        margin-right: 15px;
+      }
+
+      .label {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .value {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      /* Status Colors for Demo */
+      #rainCard {
+        background: #2ecc71; /* Green for Dry */
+        grid-column: span 2;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>WEATHER STATION</h1>
+        <p class="time">Arduino UNO R4 WiFi • Live</p>
+      </div>
+
+      <div class="card">
+        <div>Current Temperature</div>
+        <div class="temp-display">25<span class="unit">&deg;C</span></div>
+        <div>Humidity: 60%</div>
+      </div>
+
+      <div class="grid">
+        <div class="card info-card">
+          <div class="icon">⏱</div>
+          <div>
+            <span class="label">Pressure</span>
+            <span class="value">1013 hPa</span>
+          </div>
+        </div>
+
+        <div class="card info-card">
+          <div class="icon">🍃</div>
+          <div>
+            <span class="label">Air Quality</span>
+            <span class="value">Good</span>
+            <br /><span style="font-size: 0.7rem; opacity: 0.7">(150 ppm)</span>
+          </div>
+        </div>
+
+        <div class="card info-card" id="rainCard">
+          <div class="icon">☔</div>
+          <div>
+            <span class="label">Precipitation</span>
+            <span class="value">Dry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

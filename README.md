@@ -29,18 +29,20 @@ Unlike traditional Arduino web servers that reload the page constantly, this pro
 ## Pin Configuration
 
 ### MQ135 Sensor (Air Quality)
-| MQ135 Pin | Arduino UNO R4 Pin |
-| :--- | :--- |
-| VCC | 5V |
-| GND | GND |
-| AOUT | Analog Pin (A0) |
+| MQ135 Pin | Arduino UNO R4 Pin | Description |
+| :--- | :--- | :--- |
+| VCC | 5V | Power |
+| GND | GND | Ground |
+| AOUT | Analog Pin (A0) | Reads continuous air quality value |
+| DOUT | Analog Pin (A3) | Reads digital threshold (or secondary analog) |
 
 ### Rain Sensor (YL-83)
-| Rain Sensor Pin | Arduino UNO R4 Pin |
-| :--- | :--- |
-| VCC | 5V |
-| GND | GND |
-| AOUT | Analog Pin (A1) |
+| Rain Sensor Pin | Arduino UNO R4 Pin | Description |
+| :--- | :--- | :--- |
+| VCC | 5V | Power |
+| GND | GND | Ground |
+| AOUT | Analog Pin (A1) | Reads rain intensity (Light/Heavy) |
+| DOUT | Digital Pin (D3) | Digital trigger (Wet/Dry) |
 
 ### DHT11 Sensor (Temperature/Humidity)
 | DHT11 Pin | Arduino UNO R4 Pin |
